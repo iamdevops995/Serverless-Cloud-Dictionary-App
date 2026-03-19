@@ -7,8 +7,6 @@ const App = () => {
   const [filteredTerms, setFilteredTerms] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
-  // 👉 Change this if running backend locally
   const apiUrl = 'https://ykls9ozykj.execute-api.us-east-1.amazonaws.com/dev';
 
   const handleSearch = async () => {
@@ -29,7 +27,6 @@ const App = () => {
 
       console.log('API Response:', response.data);
 
-      // ✅ Handle both single object & array responses
       if (Array.isArray(response.data)) {
         setFilteredTerms(response.data);
       } else if (response.data) {
