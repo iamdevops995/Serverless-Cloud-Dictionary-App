@@ -32,7 +32,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       FunctionName: CloudDefinitions
-      Runtime: python3.12
+      Runtime: nodejs22.x
       Role: !GetAtt LambdaExecutionRole.Arn
       Handler: index.handler
       Timeout: 120
